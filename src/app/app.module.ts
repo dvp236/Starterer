@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import {MomentModule} from 'angular2-moment';
+
 import { AppComponent } from './app.component';
+import { CountdownComponent } from './components/countdown/countdown.component';
+
+import { routes } from './app.router';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MomentModule,
+    routes
   ],
   providers: [],
   bootstrap: [AppComponent]
